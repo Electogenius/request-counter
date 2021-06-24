@@ -1,0 +1,23 @@
+{
+  "name": "request-counter",
+  "version": "1.0.0",
+  "description": "A simple “API” that counts the number of requests it has gotten",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Electogenius/request-counter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Electogenius/request-counter/issues"
+  },
+  "homepage": "https://github.com/Electogenius/request-counter#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
