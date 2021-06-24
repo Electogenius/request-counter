@@ -1,6 +1,7 @@
 let app = require("express")()
 var a=0 //index
-app.get("/api/nth",(req, res)=>{
+/*
+app.get("/api",(req, res)=>{
     a++
     let eth="th",e=String(a)
     if(!(/^\d*1\d$/.test(e))){
@@ -11,8 +12,8 @@ app.get("/api/nth",(req, res)=>{
     res.write(e + eth)
     res.end()
 })
-
-app.get("/api/num",(req, res)=>{
+*/
+app.get("/api",(req, res)=>{
     a++
     res.write(String(a))
     res.end()
