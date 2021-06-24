@@ -19,7 +19,7 @@ app.get("/api",(req, res)=>{
     res.end()
 })
 
-app.get("/",(_,r)=>r.send(418))
+app.get("/teapot",(_,r)=>r.send(418))
 
 app.get
 app.listen(3900)
