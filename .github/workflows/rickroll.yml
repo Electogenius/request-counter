@@ -23,6 +23,7 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: api/count.txt
+          trim: true
       - name: remove
         run: rm api/count.txt
       - name: modif
