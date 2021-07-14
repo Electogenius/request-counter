@@ -29,7 +29,7 @@ jobs:
       - name: modif
         run: |
           let x=$((${{ steps.readfile.outputs.content }}+1))
-          echo "$x"
+          echo "$x" >> api/count.txt
       - name: commit
         run: |
           git config --local user.email "70614549+liimee@users.noreply.github.com"
