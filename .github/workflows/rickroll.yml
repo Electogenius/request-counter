@@ -29,7 +29,6 @@ jobs:
       - name: modif
         run: |
           let x=${{ steps.readfile.outputs.content }}
-          x=$((x+1))
       - name: commit
         run: |
           git config --local user.email "70614549+liimee@users.noreply.github.com"
