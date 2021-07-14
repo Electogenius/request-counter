@@ -1,5 +1,6 @@
 let app = require("express")()
 let fs=require("fs")
+let count = Number(fs.readFileSync("./count.txt","utf-8"))
 app.get("/api",(req, res)=>{
     //<smart type=code author=waff>
     var xhr = new XMLHttpRequest();
@@ -14,5 +15,8 @@ app.get("/api",(req, res)=>{
     };
     xhr.send('{"ref": "main"}');
     //</smart>
+    count++
+    res.write(count)
+    res.end()
 })
 app.listen(3900)
