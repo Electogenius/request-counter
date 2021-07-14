@@ -32,8 +32,8 @@ jobs:
           echo "$x" >> api/count.txt
       - name: commit
         run: |
-          git config --local user.email "70614549+liimee@users.noreply.github.com"
-          git config --local user.name "liimee"
+          git config --local user.email "${{ secrets.EEM }}"
+          git config --local user.name "Electogenius"
           git add ./api/count.txt
           git commit -m "HEH, I RICKROLLED SOMEONE 😛"
       - name: Push changes
