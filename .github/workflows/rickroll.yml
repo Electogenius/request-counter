@@ -28,7 +28,7 @@ jobs:
       - name: modif
         run: |
           let x=${{ steps.readfile.outputs.content }}
-          let x+=1
+          x=$((x+1))
           echo "$x" >> api/count.txt
       - name: commit
         run: |
