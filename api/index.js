@@ -1,6 +1,15 @@
-let app = require("express")()
-let fs=require("fs")
-let count = Number(fs.readFileSync("./count.txt","utf-8"))
+let app = require("express")();
+let count;
+//<smart type=code author=waff modified>
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://raw.githubusercontent.com/Electogenius/request-counter/main/api/count.txt");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        count = xhr.responseText
+      }
+    };
+    xhr.send();
+//</smart>
 app.get("/api",(req, res)=>{
     //<smart type=code author=waff>
     var xhr = new XMLHttpRequest();
